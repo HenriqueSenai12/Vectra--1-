@@ -505,42 +505,37 @@ a {
 }
 
 .contact-info {
+  position: relative;
+  left: 260px;
+  top:580px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Centraliza o bloco todo em relação ao formulário */
+  align-items: flex-start; /* Alinha tudo à esquerda */
   gap: 2.5rem;
   width: 100%;
+  padding-left: 2rem; /* Dá um respiro entre o formulário e os ícones */
 }
 .contact-item {
-  position: relative;
-    left: 20rem;
-    bottom: 14rem;
-    display: flex;
-    flex-direction: column;                   /* Muda de vertical para horizontal */
-    align-items: center;      /* Alinha o ícone e o texto ao centro verticalmente */
-    text-align: left;         /* Alinha o texto à esquerda */
-    gap: 1rem;                /* Espaço entre o ícone e o grupo de texto */
+  display: flex;
+  flex-direction: row; /* Coloca o ícone e o texto lado a lado */
+  align-items: center; /* Centraliza o ícone com o texto verticalmente */
+  gap: 1.5rem; /* Espaço exato entre o ícone e a letra */
+  width: 100%;
 }
 .contact-info-group {
+  
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
 }
 
-#map-pin{}
-#mail{}
-#phone{
-  display: flex;
-  flex-direction: row;
+.contact-icon i {
+  width: 28px;
+  height: 28px;
 }
 
-.contact-icon {
- 
-  color: var(--primary-blue);
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
-  gap: 4rem;
-}
+
 .contact-item h3 { font-size: 1rem; margin-bottom: 0.25rem; }
 .contact-item p { color: var(--text-muted); font-size: 0.875rem; }
 
@@ -574,12 +569,15 @@ a {
    (Telas até 991px de largura)
    ========================================= */
 @media (max-width: 950px) {
-  /* Todo o seu código de celular (que esconde a navbar e mostra o menu hambúrguer) fica aqui dentro */
+  
   .objective-card,.feature-card{
     padding: 1.5rem 1.2rem!
     important;
     margin-left: 1rem !important;
     margin-right: 1rem !important;
+    .contact-info {
+    padding-left: 0;
+  }
 
     
 }
