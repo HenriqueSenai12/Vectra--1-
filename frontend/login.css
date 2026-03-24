@@ -24,6 +24,7 @@ body {
     justify-content: center;
     width: 100%;
     margin-bottom: 20px;
+    
 }
 
 /* 2. A CAIXA DE TRÁS (Onde fica o vidro e o espaço transparente) */
@@ -33,6 +34,7 @@ body {
     z-index: 9;
     justify-content: center;
     bottom: -165.75px;
+    right: 0.25rem;
     padding-top: 110px;
     padding-bottom: auto;
     padding-left: auto;
@@ -48,9 +50,11 @@ body {
 
 /* 3. A IMAGEM (Totalmente livre) */
 .logo-livre {
+    display: flex;
+    align-items: center;
     position: relative;
     bottom: -20px;
-    left: 0.55rem;
+    left: 4.10px;
     width: 360px;
     height: auto;
     display: block;
