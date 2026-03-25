@@ -53,10 +53,7 @@
                    <i class="ph ph-house text-2xl min-w-[24px]"></i>
                     <span class="sidebar-text ml-4 font-medium whitespace-nowrap transition-opacity duration-300">Home</span>
                 </a>
-                <a href="#" class="sidebar-item text-slate-400 hover:text-vectra-light hover:bg-vectra-light/10 flex items-center p-3 rounded-xl relative group transition-all duration-300">
-                    <div class="absolute left-0 w-1 h-8 bg-vectra-light rounded-r-md shadow-[0_0_10px_#4FA3FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <i class="ph ph-list-dashes text-2xl min-w-[24px] group-hover:scale-110 transition-transform duration-300"></i>
-                    <span class="sidebar-text ml-4 font-medium whitespace-nowrap transition-opacity duration-300">Registros</span>
+                
                 </a>
                 <a href="usuarios.html" class="sidebar-item text-slate-400 hover:text-vectra-light hover:bg-vectra-light/10 flex items-center p-3 rounded-xl relative group transition-all duration-300">
                     <div class="absolute left-0 w-1 h-8 bg-vectra-light rounded-r-md shadow-[0_0_10px_#4FA3FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -94,10 +91,15 @@
                 </div>
                 
                 <div class="flex items-center gap-6">
-<button class="text-slate-400 hover:text-white transition-colors">
+
+<button class="text-slate-400 hover:text-white transition-colors relative">
                         <i class="ph ph-bell text-2xl"></i>
+                        <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border-2 border-vectra-base"></span>
                     </button>
-                    <img src="https://ui-avatars.com/api/?name=Operador+Vectra&background=1E3A5F&color=fff" alt="Avatar" class="w-10 h-10 rounded-full border border-white/20 cursor-pointer">
+
+                    <img id="userAvatarHeader" src="https://ui-avatars.com/api/?name=Admin+Vectra&background=4FA3FF&color=fff&bold=true" alt="Avatar" class="w-10 h-10 rounded-full border border-white/20 cursor-pointer hover:scale-105 transition-transform duration-200 user-avatar-header" title="Administrador">
+
+
                 </div>
             </header>
 
@@ -117,18 +119,7 @@
             </div>
         </div>
 
-        <div class="card-animado delay-2 hover-gradient-border relative overflow-hidden rounded-2xl p-6 shadow-lg border border-white/5 cursor-pointer group h-48 flex flex-col justify-between transition-all duration-300 text-white">
-            <div class="flex justify-between items-start z-10">
-                <div>
-                    <h2 class="text-xl font-bold mb-1">Registros</h2>
-                    <p class="text-sm text-slate-400">Visualize os logs de operação.</p>
-                </div>
-                <i class="ph ph-database text-3xl text-amber-400/80"></i>
-            </div>
-            <div class="z-10 mt-auto">
-                <i class="ph ph-arrow-right text-xl group-hover:translate-x-2 transition-all duration-300"></i>
-            </div>
-        </div>
+        
 
         <div class="card-animado delay-3 hover-gradient-border relative overflow-hidden rounded-2xl p-6 shadow-lg border border-white/5 cursor-pointer group h-48 flex flex-col justify-between transition-all duration-300 text-white">
             <div class="flex justify-between items-start z-10">
@@ -166,7 +157,9 @@
 </section>
 
         </main>
-    </div> <script>
+
+    <script src="../../scripts.js"></script>
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             const menuBtn = document.getElementById('menu-btn');
             const sidebar = document.getElementById('sidebar');
@@ -179,5 +172,6 @@
             }
         });
     </script>
+
 </body>
 </html>

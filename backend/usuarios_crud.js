@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const deleteUser = async (id) => {
     if (!confirm('Confirma exclusão?')) return;
     try {
-      const response = await fetch(`/api/users/${id}`, {
+      const response = await fetch(`/backend/users/${id}`, {
         method: 'DELETE'
       });
       if (response.ok) {
