@@ -487,6 +487,8 @@ a {
   width: 100%;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
+          position: relative;
+        left: 15rem
 }
 .form-group { margin-bottom: 1.5rem; }
 .form-group label {
@@ -691,6 +693,8 @@ gap: 1rem !important;
   .contact-form {
     padding: 3rem 4rem !important; /* 3rem em cima/embaixo e 4rem nas laterais */
     width: 100% !important;
+            position: relative;
+        left: 15rem
   }
   
   .mobile-only {
