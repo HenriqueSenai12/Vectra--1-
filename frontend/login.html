@@ -67,8 +67,55 @@
         </form>
     </div>
 
+<<<<<<< HEAD
     <script src="../backend/Login.js"></script>
     <script src="../scripts.js"></script>
+=======
+    <script src="../backend/login.js"></script>
+    
+    <script>
+    // ==========================================
+    // 1. PROCURA OS ELEMENTOS NA TELA (UMA SÓ VEZ)
+    // ==========================================
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const loginBtn = document.getElementById('loginBtn');
+    const emailInput = document.getElementById('email');
+
+    // ==========================================
+    // 2. FUNCIONALIDADE DO OLHO (MOSTRAR/OCULTAR)
+    // ==========================================
+    if (togglePassword && passwordInput) {
+        togglePassword.addEventListener('click', function () {
+            const tipoAtual = passwordInput.getAttribute('type');
+            const novoTipo = tipoAtual === 'password' ? 'text' : 'password';
+            
+            passwordInput.setAttribute('type', novoTipo);
+            
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    }
+
+    // ==========================================
+    // 3. FUNCIONALIDADE DE LOGIN DE TESTE
+    // ==========================================
+    if (loginBtn && emailInput && passwordInput) {
+        loginBtn.addEventListener('click', function (evento) {
+            evento.preventDefault(); // Impede recarregar a página
+
+            const emailDigitado = emailInput.value;
+            const senhaDigitada = passwordInput.value;
+
+            if (emailDigitado === 'admin@gmail.com' && senhaDigitada === '123abc') {
+                window.location.href = 'Tela principal/painel_principal.html'; // Sucesso! Vai para o painel
+            } else {
+                alert('E-mail ou senha incorretos. Tente novamente!'); // Erro!
+            }
+        });
+    }
+</script>
+>>>>>>> 0badc835a20201100b91a41cf6789b3cb50d5834
 
 
     
